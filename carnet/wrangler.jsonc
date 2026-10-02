@@ -1,0 +1,18 @@
+{
+  // Configuration Cloudflare du site. Documentation : https://developers.cloudflare.com/workers/wrangler/configuration/
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "carnet-entrainement",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-09-01",
+
+  // L'interface : fichiers servis tels quels par Cloudflare (gratuit, sans passer par le serveur)
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+
+  // La base de données du carnet. À la mise en ligne, remplacer database_id par l'identifiant
+  // renvoyé par « npx wrangler d1 create carnet-entrainement » (voir CLAUDE.md).
+  "d1_databases": [
+    { "binding": "DB", "database_name": "carnet-entrainement", "database_id": "00000000-0000-0000-0000-000000000000" }
+  ],
+
+  "observability": { "enabled": true }
+}
