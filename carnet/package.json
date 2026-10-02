@@ -1,0 +1,15 @@
+{
+  "name": "carnet-entrainement",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Carnet d'entraînement : séances, programme, progression et nutrition.",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "sauvegarde": "wrangler d1 export carnet-entrainement --remote --output sauvegarde.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

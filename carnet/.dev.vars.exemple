@@ -1,0 +1,3 @@
+# Mot de passe utilisé seulement pour les essais sur cet ordinateur (npm run dev).
+# Copier ce fichier sous le nom .dev.vars. Le vrai mot de passe du site se règle avec : npx wrangler secret put MOT_DE_PASSE
+MOT_DE_PASSE=essai-local-1234
